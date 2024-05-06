@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css ">    
+    <title>Document</title>
+</head>
+<body>
+    <h1>Catalogo</h1>
+    <table border = 1>
+        <thead>
+        <tr>
+            <th>Codice</th>
+            <th>Titolo</th>
+            <th>Genere</th>
+            <th>Anno</th>
+            <th>Voto</th>
+            <th>Codice</th>
+            <th>Elimina</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="film : ${films}">
+            <td th:text="${film.codice}"></td>
+            <td th:text="${film.titolo}"></td>
+            <td th:text="${film.genere}"></td>
+            <td th:text="${film.anno}"></td>
+            <td th:text="${film.voto}"></td>
+        </tr>
+        </tbody>
+    </table>
+    
+    <form th:action="@{/films/nuovo}" method="post">
+        <button type="submit">Aggiungi film</button>
+    </form>
+
+    <form th:action="@{/films/svuota}" method="post">
+        <button type="submit">Svuota catalogo</button>
+    </form>
+    
+    </body>
+    </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css ">    
+    <title>Nuovo film form</title>
+</head>
+<body>
+    <h2>Nuovo Film</h2>
+
+    <form method="post" action="/films/nuovo">
+        <label>Codice: <input type="text" name="codice"/></label><br>
+        <label>Titolo: <input type="text" name="titolo"/></label><br>
+        <label>Genere: 
+        <select name="generi" id="lang">
+            <option value="horror">Horror</option>
+            <option value="commedia">Commedia</option>
+            <option value="sci-fi">Sci-fi</option>
+            <option value="azione">Azione</option>
+            <option value="fantasy">Fantasy</option>
+          </select></label><br>
+        <label>Anno: <input type="text" name="anno"/></label><br>
+        <label>Voto: <input type="text" name="voto" min="1" max="5"/></label><br>
+        <input type="submit" value="Aggiungi"/>
+    </form>
+
+</body>
+</html>
